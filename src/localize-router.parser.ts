@@ -1,13 +1,9 @@
-import { Routes, Route } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
 import { Location } from '@angular/common';
-import 'rxjs/add/observable/forkJoin';
-import 'rxjs/add/operator/share';
-import 'rxjs/add/operator/toPromise';
-import { CacheMechanism, LocalizeRouterSettings } from './localize-router.config';
 import { Inject } from '@angular/core';
+import { Route, Routes } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import { Observable, Observer } from 'rxjs';
+import { CacheMechanism, LocalizeRouterSettings } from './localize-router.config';
 
 const COOKIE_EXPIRY = 30; // 1 month
 

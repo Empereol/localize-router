@@ -1,8 +1,9 @@
+
+import { of as observableOf } from 'rxjs';
 import { Injector } from '@angular/core';
 import { LocalizeParser, ManualParserLoader } from '../src/localize-router.parser';
 import { getTestBed, TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { Routes } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
 import { TranslateService } from '@ngx-translate/core';
 import { Location, CommonModule } from '@angular/common';
 import {
@@ -37,14 +38,14 @@ class FakeTranslateService {
 
   use(lang: string) {
     this.currentLang = lang;
-    return Observable.of(Object.keys(this.content).reduce((prev: any, key) => {
+    return observableOf(Object.keys(this.content).reduce((prev: any, key) => {
       prev[key] = this.content[key] + this.currentLang;
       return prev;
     }, {}));
   }
 
   get(input: string) {
-    return Observable.of(this.content[input] ? this.content[input] + this.currentLang : input);
+    return observableOf(this.content[input] ? this.content[input] + this.currentLang : input);
   }
 
   getBrowserLang() {
