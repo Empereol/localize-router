@@ -4,10 +4,20 @@
     "outDir": "../out-tsc/app",
     "module": "es2015",
     "baseUrl": "",
-    "types": []
+    "types": [],
+    "paths": {
+      "@angular/*": ["../node_modules/@angular/*"]
+    }
   },
+  "include":[
+    "./**/*.ts",
+    "../node_modules/localize-router/**/*.ts"
+  ],
   "exclude": [
     "test.ts",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "../node_modules/localize-router/**/*.spec.ts",
+    "../node_modules/localize-router/demo",
+    "../node_modules/localize-router/node_modules"
   ]
 }
