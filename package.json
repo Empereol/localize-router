@@ -32,7 +32,7 @@
   "typings": "index.d.ts",
   "homepage": "https://github.com/Greentube/localize-router",
   "peerDependencies": {
-    "@ngx-translate/core": ">=8.0.0"
+    "@ngx-translate/core": ">=10.0.2"
   },
   "devDependencies": {
     "@angular/animations": "6.0.5",
@@ -45,7 +45,7 @@
     "@angular/platform-browser-dynamic": "6.0.5",
     "@angular/platform-server": "6.0.5",
     "@angular/router": "6.0.5",
-    "@ngx-translate/core": "8.0.0",
+    "@ngx-translate/core": "^10.0.2",
     "@types/es6-promise": "0.0.32",
     "@types/hammerjs": "2.0.34",
     "@types/jasmine": "2.5.47",
